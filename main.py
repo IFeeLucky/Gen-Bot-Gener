@@ -9,6 +9,7 @@ genmsg = '.nfa'
 channel_id = 923979100140474378
 bot_id = 791694664159199253
 token = "yout token here"
+time = 300
 if not os.path.isfile('alts.txt'):
     f = open('alts.txt', "w", encoding="UTF-8")
     f.write("")
@@ -54,7 +55,7 @@ async def on_connect():
         channel = Funny.get_channel(channel_id)
         await channel.send(genmsg)
         print(Colorate.Color(Colors.dark_green, f'{genmsg} sent!'))
-        await asyncio.sleep(3600)
+        await asyncio.sleep(time)
 
     
 
